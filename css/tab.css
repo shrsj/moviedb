@@ -1,0 +1,150 @@
+#header {
+
+    background:#3a5795;
+    font-family: algerian;
+    color:white;
+    text-align:center;
+    padding:5px;
+    box-shadow: 0 0 5px black;
+    padding: 1%;
+    border: 1px solid white;
+    height:auto;
+}
+
+#section2 .tab,
+#section1 .tab {
+    
+
+    text-align: center;
+    width: 235px;
+    height: 320px;
+    padding-bottom: 10%;
+    padding :3%;
+    border-radius: 5%;
+    border: 2px solid #f5f5f5;
+    overflow: hidden;
+    background:#2FC19E;
+    box-shadow: 0 0 3px ;
+    float : left;
+    margin:10px;
+}
+
+#section1,
+#section2{
+    border: 1px solid blue;
+    width:100%;
+    height:auto;
+    float:left;
+    margin: 2px;
+}
+
+#header span{
+    font-size: 20px;
+    text-decoration: none;
+
+
+
+}
+
+.container .tab{
+    text-align: center;
+    width: 20%;
+    height: 460px;
+    padding :2%;
+    border-radius: 4%;
+    border: 2px solid #f5f5f5;
+    overflow: hidden;
+    background:#2FC19E;
+    box-shadow: 0 0 3px ;
+    float : left;
+    margin:15px;
+    
+
+}
+
+.container .row .paginate{
+    float:left;
+    width:100%;
+
+
+}
+
+
+.round-button {
+    width: 7%;
+    height: 0;
+    padding-bottom:7%;
+
+    border: 2px solid #f5f5f5;
+    overflow: hidden;
+    background: #35abdb;
+    box-shadow: 0 0 1px gray;
+}
+
+.round-button:hover {
+    background: #2db34a;
+}
+
+.round-button img {
+    display: block;
+    width: 76%;
+    padding: 12%;
+    height: auto;
+}
+
+.s1 input[type="submit"],
+.s1 input[type="button"]{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 5%;
+    padding: 1%;
+    background: #35abdb;
+    border-bottom: 2px solid #30C29E;
+    border-top-style: none;
+    border-right-style: none;
+    border-left-style: none;    
+    color: #fff;
+}
+
+.s1 input[type="submit"]:hover,
+.s1 input[type="button"]:hover{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 5%;
+    padding: 1%;
+    background: #2db34a;
+    border-bottom: 2px solid #30C29E;
+    border-top-style: none;
+    border-right-style: none;
+    border-left-style: none;    
+    color: #fff;
+}
+
+.s1 input[type="text"],
+.s1 input[type="password"]
+{
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 100%;
+    background: #fff;
+    margin-bottom: 4%;
+    border: 1px solid #ccc;
+    padding: 3%;
+    color: #555;
+    font: 95% Arial, Helvetica, sans-serif;
+
+}
+
+#container3{
+    height:30%;
+    width:60%;
+    margin:10px;
+}

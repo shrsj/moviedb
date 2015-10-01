@@ -2,7 +2,7 @@
 <html>
 <head>
     <title> Update Database</title>
-    <link rel="stylesheet" href="css/insertpage.css" type="text/css" />
+    <link rel="stylesheet" href="css/insert.css" type="text/css" />
     <link rel="stylesheet" href="./css/homepage.css" type="text/css">
 </head>
 <body>
@@ -79,10 +79,7 @@
         if( isset ($_POST["update"]))
         {
             $movid     = $_GET["movid"];
-            $servername = "localhost";
-            $username = "root";
-            $password = "";
-            $dbname = "movies";
+           include('config.php');
 
             $moviename = $_POST["moviename"];
             $genre     = $_POST["genre"];
@@ -95,14 +92,14 @@
             $imdb      = $_POST["imdb"];
 
             try {
-                    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+                    $conn3 = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
                     // set the PDO error mode to exception
-                    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                    $conn3->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
                     $sql = "UPDATE movies SET moviename = '$moviename', genre = '$genre', year = '$year', rating = '$rating',actors = '$actors',directors = '$directors', length = '$length', thumbnail = '$thumbs', imdbcode = '$imdb' WHERE movie_id = '$movid';";
 
                     // Prepare statement
-                    $stmt = $conn->prepare($sql);
+                    $stmt = $conn3->prepare($sql);
 
                     // execute the query
                     $stmt->execute();
@@ -115,7 +112,7 @@
                     echo $sql . "<br>" . $e->getMessage();
                     }
 
-                $conn = null;
+                $conn3 = null;
             }
         echo "Asta La vista!!! New record is created. <br><br>";
        

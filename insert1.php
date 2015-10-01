@@ -14,16 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] <> "POST")
 if ($_POST["captcha_input"] == $_SESSION["pass"])
 {
 
-			/*** mysql hostname ***/
-			$hostname = 'localhost';
-
-			/*** mysql username ***/
-			$username = 'root';
-
-			/*** mysql password ***/
-			$password = '';
-			$dbname = 'movies';
-
+		include('config.php');
 
 			$moviename = $_POST["moviename"];
 			$genre     = $_POST["genre"];
@@ -37,24 +28,25 @@ if ($_POST["captcha_input"] == $_SESSION["pass"])
 
 
 			try {
-			    $conn = new PDO("mysql:host=$hostname;dbname=$dbname", $username, $password);
-			    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+			    $conn3 = new PDO("mysql:host=$hostname;dbname=$dbname", $username, $password);
+			    $conn3->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 			      $sql = "INSERT INTO movies(moviename, genre, year, rating, actors, directors, length, thumbnail,imdbcode )
 			              VALUES ('$moviename', '$genre', '$year', '$rating', '$actors','$directors','$length','$thumbs', '$imdb')";
 			   // use exec() because no results are returned
-			    $conn->exec($sql);
-			    echo "Record updated successfully";
+			    $conn3->exec($sql);
+			   header("Location: http://movies.sj/logd.php");
+				exit;
 			    }
 			catch(PDOException $e)
 			    {
 			    echo $sql . "<br>" . $e->getMessage();
 			    }
 
-			$conn = null;
+			$conn3 = null;
 
 	// *** They passed the test! ***
 	// *** This is where you would post a comment to your database, etc ***
-	echo "Asta La vista!!! Record is Updated. <br><br>";
+	
        
 
 } else {
