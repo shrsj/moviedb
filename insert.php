@@ -73,7 +73,7 @@ function readURL(input) {
     <input type = 'text' name = 'imdb' id = 'imdb' placeholder = 'IMDB unique code' >
     <input type = 'text' name = 'theater' id = 'theater' placeholder = 'Theater name' >
     <input type = 'text' name = 'lat' id = 'lat' placeholder = 'Latitude' >
-    <input type = 'text' name = 'lng' id = 'lng' placeholder = 'Longitude' >
+    <input type = 'text' name = 'lng' id = 'lng' placeholder = 'Longitue' >
     <img src="captcha_image.php" />
     <input type="text" name="captcha_input" size="15">
     <input type = "submit">

@@ -1,7 +1,0 @@
-"<table id ='tab'><tr><td><h3> Movie Title :</h3></td><td><h3>{$row['moviename']}</h3></td></tr><br> ".
-         "<tr><td><h3> Genre :<h3></td><td><h3>{$row['genre']} </h3> </td></tr><br> ".
-         "<tr><td><h3> Year :<h3></td><td><h3>{$row['year']}   </h3></td></tr> <br> ".
-         "<tr><td><h3> Rating :<h3></td><td><h3>{$row['rating']} </h3></td></tr> <br> ".
-		 "<tr><td><h3> Actors :<h3></td><td><h3>{$row['actors']}   </h3> </td></tr><br> ".
-		 "<tr><td><h3> Directors :<h3></td><td><h3>{$row['directors']}   </h3> </td></tr><br> ".
-	     "<tr><td><h3> Cover Picture :<h3></td><td> <img src='thumbs/".$row['thumbnail'].".jpg' width='150' height='150'/></td></tr><br> </table>";
