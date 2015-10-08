@@ -16,33 +16,28 @@ if ($_POST["captcha_input"] == $_SESSION["pass"])
 
 		include('config.php');
 
-			$moviename = $_POST["moviename"];
-			$genre     = $_POST["genre"];
-			$year      = $_POST["yob"];
-			$rating    = $_POST["rating"];
-			$actors    = $_POST["actors"];
-			$directors = $_POST["directors"];
-			$length    = $_POST["length"];
-			$thumbs    = $_POST["thumbs"];
-			$imdb      = $_POST["imdb"];
-
+		$movid =$_POST['movid'];
+		$lat = $_POST["lat"];
+		$lng = $_POST["lng"];
+		$theater = $_POST["theater"];
 
 
 			try {
 			    $conn3 = new PDO("mysql:host=$hostname;dbname=$dbname", $username, $password);
 			    $conn3->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-			      $sql = "INSERT INTO movies(moviename, genre, year, rating, actors, directors, length, thumbnail,imdbcode )
-			              VALUES ('$moviename', '$genre', '$year', '$rating', '$actors','$directors','$length','$thumbs', '$imdb')";
-			   
+			      
+			      $sql1 = "INSERT INTO screenings(movid , theaters, lat , lng)
+			      			VALUES ('$movid' , '$theater' , '$lat' , '$lng')";
 
 			   // use exec() because no results are returned
-			    $conn3->exec($sql);
+			   
+			    $conn3->exec($sql1);
 			   header("Location: http://movies.sj/logd.php");
 				exit;
 			    }
 			catch(PDOException $e)
 			    {
-			    echo $sql . "<br>" . $e->getMessage();
+			    echo $sql1. "<br>" . $e->getMessage();
 			    }
 
 			$conn3 = null;

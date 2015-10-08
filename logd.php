@@ -98,16 +98,19 @@ error_reporting(E_ALL & ~ E_NOTICE & ~ E_STRICT & ~ E_DEPRECATED );
                         Directors :<?php echo mysql_result($result, $i, 'directors'); ?> <br> 
                          <br> <center><img src='<?php echo mysql_result($result, $i, "thumbnail"); ?>' width='150' height='150'/></center> <br>
 
-                        <form method= 'POST' action = '' name = 'delete' id='delete' onsubmit='return del("<?php echo mysql_result($result, $i, "movie_id"); ?>");'>
+                        <form method= 'POST' action = '' name = 'delete' id='delete' onsubmit='return del("<?php echo mysql_result($result, $i, "movie_id"); ?>");' style=" float:left;">
                         <input type ='hidden' name = 'movid'  value='<?php echo mysql_result($result, $i, "movie_id"); ?>'>
                         <input type ='submit' value = 'delete' name = 'delete'></form>
 
-                        <a href='displaym.php?movid=<?php echo mysql_result($result, $i, "movie_id"); ?>'><em> Read</em></a>
-
-                        <form name = 'update' id='update' method= 'GET' action = './update.php'>
+                        <a href='displaym.php?movid=<?php echo mysql_result($result, $i, "movie_id"); ?>' ><em> <b>Read</b></em></a> &nbsp;
+                         <a href='theater.php?movid=<?php echo mysql_result($result, $i, "movie_id"); ?>'> <img src="./plus-sign8.svg" height="20px" width = "20px" > Shows </a>
+                        <form name = 'update' id='update' method= 'GET' action = './update.php' style=" float:right;">
                         <input type = 'hidden' name ='movid' value =<?php echo mysql_result($result, $i, 'movie_id'); ?>>
                         <input type ='submit' value='update'> </form>
+                       
+
                     </div>
+
             <?php }?>
             <div class="row">
             	<br> 
