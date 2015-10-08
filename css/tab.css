@@ -50,7 +50,7 @@
 .container .tab{
     text-align: center;
     width: 20%;
-    height: 420px;
+    height: 400px;
     padding :2%;
     border-radius: 4%;
     border: 2px solid #f5f5f5;
@@ -162,4 +162,8 @@
     border-spacing: 20px;
     margin:5px;
     padding:5px;
+}
+
+a{
+    color:black;
 }
