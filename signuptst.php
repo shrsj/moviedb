@@ -88,7 +88,7 @@ else
 	                          VALUES ('$fname' ,'$lname', '$gender','$yob','$country','$zipcode','$email','$pass' )";
 	               // use exec() because no results are returned
 	                $conn3->exec($sql);
-	                echo "Record updated successfully";
+	                echo "<div>Record updated successfully <div>";
 	                include('testmail.php');
 	            }
             catch(PDOException $e)

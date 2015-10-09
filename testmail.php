@@ -1,11 +1,10 @@
 <?php 
 require("/sendgrid-php/sendgrid-php.php");
-echo "i m inside sendgridsending mail to". $email;
+echo "<div>Confirmation successful Mail Has Been Sent!! ". $email . "<div>";
 
-$user = "shravansji1234";
-$pass = "shrsji123";
+$apkey = "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";
 
-$sendgrid = new SendGrid($user, $pass);
+$sendgrid = new SendGrid($apkey);
 
 $username = 'Shravan';
 $useradd =$email;
@@ -22,5 +21,16 @@ $email
 
 
 $sendgrid->send($email);
+
+// Or catch the error
+
+try {
+    $sendgrid->send($email);
+} catch(\SendGrid\Exception $e) {
+    echo $e->getCode();
+    foreach($e->getErrors() as $er) {
+        echo $er;
+    }
+}
 
 ?>

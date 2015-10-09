@@ -103,7 +103,7 @@ error_reporting(E_ALL & ~ E_NOTICE & ~ E_STRICT & ~ E_DEPRECATED );
                         <input type ='submit' value = 'delete' name = 'delete'></form>
 
                         <a href='displaym.php?movid=<?php echo mysql_result($result, $i, "movie_id"); ?>' ><em> <b>Read</b></em></a> &nbsp;
-                         <a href='theater.php?movid=<?php echo mysql_result($result, $i, "movie_id"); ?>'> <img src="./plus-sign8.svg" height="20px" width = "20px" > Shows </a>
+                         <a href='dmarker.php?movid=<?php echo mysql_result($result, $i, "movie_id"); ?>'> <img src="./plus-sign8.svg" height="20px" width = "20px" > Shows </a>
                         <form name = 'update' id='update' method= 'GET' action = './update.php' style=" float:right;">
                         <input type = 'hidden' name ='movid' value =<?php echo mysql_result($result, $i, 'movie_id'); ?>>
                         <input type ='submit' value='update'> </form>

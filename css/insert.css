@@ -30,6 +30,7 @@
 	margin: -16px -16px 16px -16px;
 }
 .s1 input[type="text"],
+.s1 input[type="textbox"],
 .s1 input[type="date"],
 .s1 input[type="datetime"],
 .s1 input[type="email"],
